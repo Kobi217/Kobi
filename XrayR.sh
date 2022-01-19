@@ -350,14 +350,14 @@ show_status() {
 show_enable_status() {
     check_enabled
     if [[ $? == 0 ]]; then
-        echo -e "是否开机自启: ${green}是${plain}"
+        echo -e "Có tự động bắt đầu không: ${green}是${plain}"
     else
-        echo -e "是否开机自启: ${red}否${plain}"
+        echo -e "Có tự động bắt đầu không: ${red}否${plain}"
     fi
 }
 
 show_XrayR_version() {
-    echo -n "XrayR 版本："
+    echo -n "Phiên bản XrayR："
     /usr/local/XrayR/XrayR -version
     echo ""
     if [[ $# == 0 ]]; then
@@ -366,50 +366,50 @@ show_XrayR_version() {
 }
 
 show_usage() {
-    echo "XrayR 管理脚本使用方法: "
+    echo "Cách sử dụng tập lệnh quản lý XrayR: "
     echo "------------------------------------------"
-    echo "XrayR              - 显示管理菜单 (功能更多)"
-    echo "XrayR start        - 启动 XrayR"
-    echo "XrayR stop         - 停止 XrayR"
-    echo "XrayR restart      - 重启 XrayR"
-    echo "XrayR status       - 查看 XrayR 状态"
-    echo "XrayR enable       - 设置 XrayR 开机自启"
-    echo "XrayR disable      - 取消 XrayR 开机自启"
-    echo "XrayR log          - 查看 XrayR 日志"
-    echo "XrayR update       - 更新 XrayR"
-    echo "XrayR update x.x.x - 更新 XrayR 指定版本"
-    echo "XrayR install      - 安装 XrayR"
-    echo "XrayR uninstall    - 卸载 XrayR"
-    echo "XrayR version      - 查看 XrayR 版本"
+    echo "XrayR              - Hiển thị menu quản trị (nhiều chức năng hơn)"
+    echo "XrayR start        - Bắt đầu XrayR"
+    echo "XrayR stop         - Dừng XrayR"
+    echo "XrayR restart      - Khởi động lại XrayR"
+    echo "XrayR status       - Xem trạng thái XrayR"
+    echo "XrayR enable       - Đặt XrayR thành tự động bật"
+    echo "XrayR disable      - Tắt tự động khởi động XrayR"
+    echo "XrayR log          - Xem nhật ký XrayR"
+    echo "XrayR update       - Cập nhật XrayR"
+    echo "XrayR update x.x.x - Cập nhật phiên bản XrayR được chỉ định"
+    echo "XrayR install      - Cài đặt XrayR"
+    echo "XrayR uninstall    - Gỡ cài đặt XrayR"
+    echo "XrayR version      - Xem phiên bản XrayR"
     echo "------------------------------------------"
 }
 
 show_menu() {
     echo -e "
-  ${green}XrayR 后端管理脚本，${plain}${red}不适用于docker${plain}
+  ${green}Các tập lệnh quản lý phụ trợ XrayR，${plain}${red}không hoạt động với docker${plain}
 --- https://github.com/XrayR-project/XrayR ---
-  ${green}0.${plain} 修改配置
+  ${green}0.${plain} Thay đổi cài đặt
 ————————————————
-  ${green}1.${plain} 安装 XrayR
-  ${green}2.${plain} 更新 XrayR
-  ${green}3.${plain} 卸载 XrayR
+  ${green}1.${plain} Cài đặt XrayR
+  ${green}2.${plain} Cập nhật XrayR
+  ${green}3.${plain} Gỡ cài đặt XrayR
 ————————————————
-  ${green}4.${plain} 启动 XrayR
-  ${green}5.${plain} 停止 XrayR
-  ${green}6.${plain} 重启 XrayR
-  ${green}7.${plain} 查看 XrayR 状态
-  ${green}8.${plain} 查看 XrayR 日志
+  ${green}4.${plain} Khởi động XrayR
+  ${green}5.${plain} Dừng XrayR
+  ${green}6.${plain} Khởi động lại XrayR
+  ${green}7.${plain} Xem trạng thái XrayR
+  ${green}8.${plain} Xem nhật ký XrayR
 ————————————————
-  ${green}9.${plain} 设置 XrayR 开机自启
- ${green}10.${plain} 取消 XrayR 开机自启
+  ${green}9.${plain} Đặt XrayR để bắt đầu tự động
+ ${green}10.${plain} Hủy tự động khởi động XrayR
 ————————————————
- ${green}11.${plain} 一键安装 bbr (最新内核)
- ${green}12.${plain} 查看 XrayR 版本 
- ${green}13.${plain} 升级维护脚本
+ ${green}11.${plain} Một cú nhấp chuột cài đặt bbr (hạt nhân mới nhất)
+ ${green}12.${plain} Xem các phiên bản XrayR 
+ ${green}13.${plain} Nâng cấp Tập lệnh Bảo trì
  "
- #后续更新可加入上方字符串中
+ #Các bản cập nhật tiếp theo có thể được thêm vào chuỗi trên
     show_status
-    echo && read -p "请输入选择 [0-13]: " num
+    echo && read -p "Vui lòng nhập một lựa chọn [0-13]: " num
 
     case "${num}" in
         0) config
@@ -440,7 +440,7 @@ show_menu() {
         ;;
         13) update_shell
         ;;
-        *) echo -e "${red}请输入正确的数字 [0-12]${plain}"
+        *) echo -e "${red}Vui lòng nhập số chính xác [0-12]${plain}"
         ;;
     esac
 }
