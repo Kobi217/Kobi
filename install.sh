@@ -173,25 +173,25 @@ install_XrayR() {
     fi
     curl -o /usr/bin/XrayR -Ls https://raw.githubusercontent.com/Kobi217/kobi/master/XrayR.sh
     chmod +x /usr/bin/XrayR
-    ln -s /usr/bin/XrayR /usr/bin/xrayr # 小写兼容
+    ln -s /usr/bin/XrayR /usr/bin/xrayr # chữ thường tương thích
     chmod +x /usr/bin/xrayr
     echo -e ""
-    echo "XrayR 管理脚本使用方法 (兼容使用xrayr执行，大小写不敏感): "
+    echo "Cách sử dụng tập lệnh quản lý XrayR (tương thích với thực thi xrayr, không phân biệt chữ hoa chữ thường): "
     echo "------------------------------------------"
-    echo "XrayR                    - 显示管理菜单 (功能更多)"
-    echo "XrayR start              - 启动 XrayR"
-    echo "XrayR stop               - 停止 XrayR"
-    echo "XrayR restart            - 重启 XrayR"
-    echo "XrayR status             - 查看 XrayR 状态"
-    echo "XrayR enable             - 设置 XrayR 开机自启"
-    echo "XrayR disable            - 取消 XrayR 开机自启"
-    echo "XrayR log                - 查看 XrayR 日志"
-    echo "XrayR update             - 更新 XrayR"
-    echo "XrayR update x.x.x       - 更新 XrayR 指定版本"
-    echo "XrayR config             - 显示配置文件内容"
-    echo "XrayR install            - 安装 XrayR"
-    echo "XrayR uninstall          - 卸载 XrayR"
-    echo "XrayR version            - 查看 XrayR 版本"
+    echo "XrayR                    - Hiển thị menu quản lý (nhiều chức năng hơn)"
+    echo "XrayR start              - Khởi động XrayR"
+    echo "XrayR stop               - Dừng XrayR"
+    echo "XrayR restart            - Khởi động lại XrayR"
+    echo "XrayR status             - Xem trạng thái XrayR"
+    echo "XrayR enable             - Đặt XrayR để bắt đầu tự động"
+    echo "XrayR disable            - Hủy tự động khởi động XrayR"
+    echo "XrayR log                - Xem nhật ký XrayR"
+    echo "XrayR update             - Cập nhật XrayR"
+    echo "XrayR update x.x.x       - Cập nhật phiên bản được chỉ định XrayR"
+    echo "XrayR config             - hiển thị nội dung tệp cấu hình"
+    echo "XrayR install            - Cài đặt XrayR"
+    echo "XrayR uninstall          - Gỡ cài đặt XrayR"
+    echo "XrayR version            - Xem các phiên bản XrayR"
     echo "------------------------------------------"
 }
 
